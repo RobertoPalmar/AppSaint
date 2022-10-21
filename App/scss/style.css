@@ -1,0 +1,117 @@
+html {
+  font-family: calibri;
+  height: 100%;
+}
+
+html * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+}
+
+.Main-Container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  background-image: linear-gradient(to right top, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
+}
+
+.Login {
+  padding: 3rem;
+  width: 20rem !important;
+  height: 25rem !important;
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 0.5rem #050505;
+}
+.Login__Title {
+  margin: 1rem 0 2rem;
+}
+.Login__Div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+.Login__Text {
+  font-size: 1.2rem;
+  color: rgb(78, 78, 78);
+}
+.Login__Info {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgb(128, 128, 128);
+  height: 1.1rem;
+  transition: opacity 0.3s;
+}
+.Login__Input {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 0.15rem solid rgb(204, 204, 204);
+  color: rgb(78, 78, 78);
+  transition: border 0.3s;
+}
+.Login__Input:hover, .Login__Input:focus {
+  outline: none;
+  border-bottom: 0.15rem solid rgb(128, 128, 128);
+}
+.Login__Button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin: 2rem 0;
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
+  transition: width 0.3s;
+}
+.Login__Button:hover {
+  width: 110%;
+}
+
+.Profile {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+.Profile__Title {
+  font-size: 3rem;
+  color: white;
+}
+.Profile__Grid {
+  display: grid;
+  grid-template-columns: repeat(4, 11rem);
+  grid-auto-rows: 11rem;
+  grid-gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  margin: 3rem;
+}
+.Profile__Box {
+  background-color: white;
+  border-radius: 0.4rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.Profile__Box:hover {
+  box-shadow: 0 0 0.5rem #050505;
+  transform: scale(1.03);
+}
+
+.bi {
+  margin-right: 0.5rem;
+}/*# sourceMappingURL=style.css.map */
