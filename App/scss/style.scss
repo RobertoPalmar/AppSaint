@@ -1,5 +1,9 @@
 
-@use "variables" as m;
+@import "variables";
+
+a{
+  color: black;
+}
 
 html{
   font-family: calibri;
@@ -20,7 +24,7 @@ body{
   min-height: 100vh;
   display: flex !important;
   justify-content: center;
-  background-image: m.$gradient;
+  background-image: $gradient;
 }
 
 .Login{
@@ -32,11 +36,12 @@ body{
   flex-direction: column;
   align-items: center;
   background-color: white;
-  border-radius: m.$br;
-  box-shadow: 0 0 .5rem m.$black;
+  border-radius: $br;
+  box-shadow: 0 0 .5rem $black;
 
   &__Title{
     margin: 1rem 0 2rem;
+    font-size: 2.5rem;
   }
 
   &__Div{
@@ -48,13 +53,13 @@ body{
 
   &__Text{
     font-size: 1.2rem;
-    color: m.$dark-grey;
+    color: $dark-grey;
   }
 
   &__Info{
     text-align: center;
     font-size: 1.1rem;
-    color: m.$grey;
+    color: $grey;
     height: 1.1rem;
     // opacity: 0;
     transition: opacity .3s;
@@ -64,32 +69,25 @@ body{
     font-size: 1.1rem;
     padding: .5rem 0;
     border:none;
-    border-bottom: .15rem solid m.$light-grey;
-    color: m.$dark-grey;
+    border-bottom: .15rem solid $light-grey;
+    color: $dark-grey;
     transition: border .3s;
 
     &:hover, &:focus{
       outline: none;
-      border-bottom: .15rem solid m.$grey;
+      border-bottom: .15rem solid $grey;
     }
   }
 
   &__Button{
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    margin: 2rem 0;
-    padding: .5em;
-    width: 100%;
-    border-radius: 1rem;
-    border: none;
-    cursor: pointer;
-    background: m.$gradient-x;
+    @include Button;
+    background: $gradient-x;
     transition: width .3s;
 
     &:hover{
       width: 110%;
     }
+    
   }
 }
 
@@ -102,12 +100,16 @@ body{
   
   &__Title{
     font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.329);
     color: white;
+    padding: .5rem 1rem;
+    border-radius: $br;
   }
 
   &__Grid{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,11rem);
+    grid-template-columns: repeat( auto-fit ,11rem);
     grid-auto-rows: 11rem;
     grid-gap: 2rem;
     justify-content: center;
@@ -116,18 +118,62 @@ body{
   }
 
   &__Box{
-    background-color: white;
-    border-radius: m.$br;
-    transition: box-shadow .3s, transform .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $br;
     cursor: pointer;
+    box-shadow: $light-shadow;
+    transition: box-shadow .3s, transform .3s;
+    
+    & .bi{
+      margin:0;
+      font-size: 8rem;
+    }
+
+    &.Use{
+      background-color: white;
+    }
+
+    &.Empty{
+      padding-top: .5rem;
+      background-color: rgba(0, 0, 0, 0.644);
+      color: white;
+    }
 
     &:hover{
-      box-shadow: 0 0 .5rem m.$black;
+      box-shadow: $shadow;
       transform: scale(1.03);
     }
 
   }
 
+  // &__Placeholder{
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: $grey;
+  // }
+
+}
+
+.Info{
+  padding:0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__Button{
+    @include Button;
+    margin: 0;
+    color:black;
+    background: white;
+    transition: width .3s;
+
+    &:hover{
+      width: 35%;
+    }
+  }
 }
 
 .bi{

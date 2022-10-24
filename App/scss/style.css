@@ -1,3 +1,7 @@
+a {
+  color: black;
+}
+
 html {
   font-family: calibri;
   height: 100%;
@@ -34,6 +38,7 @@ body {
 }
 .Login__Title {
   margin: 1rem 0 2rem;
+  font-size: 2.5rem;
 }
 .Login__Div {
   width: 100%;
@@ -70,10 +75,11 @@ body {
   color: white;
   margin: 2rem 0;
   padding: 0.5em;
-  width: 100%;
+  width: 15rem;
   border-radius: 1rem;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0 0.5rem rgb(78, 78, 78);
   background: linear-gradient(to right, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
   transition: width 0.3s;
 }
@@ -90,11 +96,15 @@ body {
 }
 .Profile__Title {
   font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.329);
   color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
 }
 .Profile__Grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 11rem);
+  grid-template-columns: repeat(auto-fit, 11rem);
   grid-auto-rows: 11rem;
   grid-gap: 2rem;
   justify-content: center;
@@ -102,14 +112,55 @@ body {
   margin: 3rem;
 }
 .Profile__Box {
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.4rem;
-  transition: box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
+  box-shadow: 0 0 0.5rem rgb(78, 78, 78);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.Profile__Box .bi {
+  margin: 0;
+  font-size: 8rem;
+}
+.Profile__Box.Use {
+  background-color: white;
+}
+.Profile__Box.Empty {
+  padding-top: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.644);
+  color: white;
 }
 .Profile__Box:hover {
   box-shadow: 0 0 0.5rem #050505;
   transform: scale(1.03);
+}
+
+.Info {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.Info__Button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin: 2rem 0;
+  padding: 0.5em;
+  width: 15rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem rgb(78, 78, 78);
+  margin: 0;
+  color: black;
+  background: white;
+  transition: width 0.3s;
+}
+.Info__Button:hover {
+  width: 35%;
 }
 
 .bi {

@@ -1,3 +1,4 @@
+//-------------------COLORES------------------//
 
 $purple: #3A008B;
 $pink: #ff53b5;
@@ -15,7 +16,29 @@ $black: #050505;
 // $gradient: linear-gradient(to right top, #3a008b, #750698, #a71da3, #d437ac, #ff53b5);
 // $gradient-x: linear-gradient(to right, #3a008b, #750698, #a71da3, #d437ac, #ff53b5);
 
+//-------------------DEGRADES------------------//
+
 $gradient: linear-gradient(to right top, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
 $gradient-x: linear-gradient(to right, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
 
+//-------------------SOMBRAS-------------------//
+
 $br: .4rem;
+
+$shadow: 0 0 .5rem $black;
+$light-shadow: 0 0 .5rem $dark-grey;
+
+//-------------------MIXINS-------------------//
+
+@mixin Button{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin: 2rem 0;
+  padding: .5em;
+  width: 15rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: $light-shadow;
+}
