@@ -27,7 +27,7 @@ body {
   border-radius: 10px;
   box-sizing: initial;
   border-left: solid 5px rgb(128, 0, 128);
-  background: linear-gradient(to right top, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
+  background: rgb(255, 245, 245);
   transition: width 0.5s;
   overflow-x: hidden;
 }
@@ -86,7 +86,7 @@ body {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    color: #050505;
+    color: rgb(5, 5, 5);
 }
 
 .navigation ul li a .title
@@ -97,7 +97,7 @@ body {
     height: 60px;
     line-height: 60px;
     white-space: normal;
-    color: #050505;
+    color: rgb(5, 5, 5);
 }
 .toggle
 {
