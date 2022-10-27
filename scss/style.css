@@ -11,7 +11,6 @@ html * {
 body {
   min-height: 100%;
 }
-
 .Main-Container {
   width: 100%;
   min-height: 100vh;
@@ -19,7 +18,122 @@ body {
   justify-content: center;
   background-image: linear-gradient(to right top, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
 }
+.navigation{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 70px;
+  border-radius: 10px;
+  box-sizing: initial;
+  border-left: solid 5px rgb(128, 0, 128);
+  background: linear-gradient(to right top, #3a008b, #680395, #8f119d, #b223a5, #d437ac, #e63fa0, #f44b96, #ff5a8c, #ff6971, #ff8155, #ff9e3a, #ffbb21);
+  transition: width 0.5s;
+  overflow-x: hidden;
+}
+.navigation.active
+{
+    width: 300px;
+}
+.navigation h1 
+{
+    font-size: 60px;
+    color: rgb(128, 0, 128);
+    padding-left: 35px;
+    overflow-x: hidden;
+    width: 49px;
+    position: relative;
+}
+.navigation.active h1
+{
+    width: 100%;
+}
+.navigation ul 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 80px;
+}
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li.active
+{
+    background: rgb(78, 78, 78);
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgb(164, 157, 145);
+}
+.navigation ul li a .bi
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #050505;
+}
 
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+    color: #050505;
+}
+.toggle
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background:rgb(98, 7, 226);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle.active
+{
+    background: rgb(255, 83, 181);
+}
+.toggle ion-icon
+{
+    position: absolute;
+    font-size: 34px;
+    display: none;
+    color: rgb(27, 29, 30);
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close
+{
+    display: block;
+}
+.toggle ion-icon.close,
+.toggle.active ion-icon.open
+{
+    display: none;
+}
 .Login {
   padding: 3rem;
   width: 20rem !important;
@@ -114,4 +228,5 @@ body {
 
 .bi {
   margin-right: 0.5rem;
+
 }/*# sourceMappingURL=style.css.map */
